@@ -1,0 +1,67 @@
+<nav class="navbar navbar-primary navbar-transparent navbar-absolute">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Been Verified</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a routerLink="/register" routerLinkActive="active">
+                        <i class="material-icons">dashboard</i> Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="wrapper wrapper-full-page" id="body-logIn">
+    <div class="full-page" filter-color="black" data-image="../../assets/images/wallpaper.jpg">
+        <div class="content">
+            <div class="container">
+                <div class="row" style="margin-top:18%;">
+                    <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                        <form novalidate (submit)="logIn($event)" autocomplete='off'>
+                            <div class="card card-login card-hidden">
+                                <div class="card-header text-center animated rubberBand" data-background-color="red">
+                                    <h4 class="card-title">Log In</h4>
+                                    <div class="social-line">
+                                        <a href="#btn" class="btn btn-just-icon btn-simple">
+                                            <i class="material-icons" style="font-size: 25px;"> 
+                                                fingerprint
+                                            </i> 
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="category text-center"></p>
+                                <div class="clearfix"></div>
+                                <div class="card-content">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">person_outline</i>
+                                        </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Email</label>
+                                            <input type="text" class="form-control" name="email" [(ngModel)]="username" required>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">lock_outline</i>
+                                        </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Password</label>
+                                            <input type="password" class="form-control" name="password" [(ngModel)]="password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer text-center">
+                                    <button type="submit" class="btn btn-danger btn-lg">Sign In</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

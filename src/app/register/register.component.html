@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top text-white" id="navigation-example">
+	<div class="container">
+    <div class="navbar-wrapper">
+			<a class="navbar-brand">Register Page</a>
+		</div>
+
+	
+
+	    <div class="collapse navbar-collapse justify-content-end">  
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a routerLink="/login" routerLinkActive="active">
+                  <i class="material-icons">fingerprint</i>
+                  Log In
+              </a>
+          </li>
+        </ul>
+	    </div>
+	</div>
+</nav>
+<!-- End Navbar -->
+
+<div class="wrapper wrapper-full-page">
+  <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('../../assets/img/wallpaper.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ml-auto mr-auto">
+          <div class="card card-signup">
+            <h2 class="card-title text-center">Register</h2>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <form class="form" novalidate (submit)="register($event)" autocomplete='off'>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">mail</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email..." name="email">
+                      </div>
+                    </div>
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                        </div>
+                        <input type="password" placeholder="Password..." class="form-control" name="password">
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit"class="btn btn-primary btn-round mt-4">Get Started</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div> 
+</div>
+      
