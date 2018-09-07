@@ -19,5 +19,6 @@ export class UserComponent implements OnInit {
     event.preventDefault();
     console.log(this.university);
   }
+  
 
 }

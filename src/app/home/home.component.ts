@@ -108,6 +108,7 @@ export class HomeComponent implements OnInit {
       user,
       email
     }
+    console.log('IDDDD: ' + id);
     localStorage.setItem(id, JSON.stringify(info));
     console.log(JSON.parse(localStorage.getItem(id)).email + '  \  ' + JSON.parse(localStorage.getItem(id)).user);
     console.log(localStorage.getItem(user+'/reportes/1'));
