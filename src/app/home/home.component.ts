@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       headerRow: [ 'User', 'Email Report', 'Action'],
       dataRows: []
     };
-    var i = JSON.parse(localStorage.getItem('num'));
+    var i = 1;
     var user = localStorage.getItem('actual');
     this.tableData1.dataRows = [];
     while(true) {
@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit {
       }
       var id = user + '/' + 'reportes/' + localStorage.getItem('num');
 
-      this.addRows(email, user, id, JSON.parse(localStorage.getItem('num')));
+      this.addRows(email, user, id);
 
       this.doc.save(id+'.pdf');
 
@@ -103,21 +103,20 @@ export class HomeComponent implements OnInit {
     this.searchEmail(selectedItem[1]);
   }
 
-  addRows(email, user, id, num) {
+  addRows(email, user, id) {
     var info = {
       user,
       email
     }
     localStorage.setItem(id, JSON.stringify(info));
     console.log(JSON.parse(localStorage.getItem(id)).email + '  \  ' + JSON.parse(localStorage.getItem(id)).user);
-    console.log(num);
     console.log(localStorage.getItem(user+'/reportes/1'));
 
-    var i = num;
+    var i = 1;
     this.tableData1.dataRows = [];
     while(true) {
       var getId = user + '/' + 'reportes/' +  JSON.stringify(i);
-      if(localStorage.getItem(getId) == null && num != 1) break;
+      if(localStorage.getItem(getId) == null) break;
       var v = [];
       console.log('RESULT USER: ' + JSON.parse(localStorage.getItem(getId)).user);
       v.push(JSON.parse(localStorage.getItem(getId)).user);

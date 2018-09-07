@@ -27,6 +27,7 @@ export class NavbarComponent implements OnInit {
 
   logout(){
     localStorage.setItem('actual', "");
+    localStorage.setItem('num', JSON.stringify(1));
     this.router.navigate(['login']);
   }
 
